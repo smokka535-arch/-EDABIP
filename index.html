@@ -1,15 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Stackly Enterprise Data Analytics & Business Intelligence Platform">
+  <title>Stackly | Sign Up & Sign In</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-   <h2>  EDABIP</h2> 
-</body>
-<script src="script.js">
+  <main class="auth-page">
+    <!-- Animated gradient background from Backgrounds Supply -->
+    <div class="bg-gradient-wrap" aria-hidden="true">
+      <iframe
+        class="bg-gradient-frame"
+        src="https://backgrounds.supply/gradient-lab/embed#s=eyJtIjoicmliYm9uIiwiYyI6WyIjZmJiMDRhIiwiI2UwNDc2YSIsIiM3ZTFiYjUiLCIjMGQ2ZjZhIiwiIzAyMDUxMiIsIiMwMDAwMDAiLCIjMDAwMDAwIiwiIzAwMDAwMCJdLCJvIjpbWzAsMF0sWzAsMF0sWzAsMF0sWzAsMF0sWzAsMF0sWzAsMF0sWzAsMF0sWzAsMF1dLCJuIjo1LCJiIjoxLCJrIjoxLjA4LCJzIjoxLjEsImciOjAuMDE4LCJwIjp7InVfdGhpY2tuZXNzIjowLjEyLCJ1X2FtcGxpdHVkZSI6MC4yMiwidV9mcmVxdWVuY3kiOjEuNCwidV9jb21wbGV4aXR5IjowLjUsInVfc3BlZWQiOjAuNDUsInVfZ2xvdyI6MC41NX19"
+        loading="lazy"
+        allow="fullscreen"
+        title="Gradient by Backgrounds Supply"
+        tabindex="-1">
+      </iframe>
+      <div class="bg-gradient-overlay"></div>
+    </div>
 
-</script>
+    <!-- Decorative analytics/security background -->
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+
+    <section class="brand-panel" aria-label="Stackly platform introduction">
+      <header class="brand">
+        <img class="brand-logo-img brand-logo-3d" src="assets/images/stackly-3d-logo.jpg" alt="Stackly Logo">
+      </header>
+
+      <div class="intro">
+        <h1>Welcome to <span>Stackly</span></h1>
+        <p>
+          Access your Enterprise Data Analytics &amp; Business
+          Intelligence Platform and continue making data-driven decisions
+          with confidence
+        </p>
+      </div>
+
+    </section>
+
+    <section class="signup-card" aria-labelledby="signup-title">
+      <div class="card-content">
+        <div class="card-brand-mobile" aria-hidden="true">
+          <img src="assets/images/stackly-3d-logo.jpg" alt="Stackly" height="32">
+        </div>
+        <h2 id="signup-title">Create Account</h2>
+        <p class="subtitle" id="signupSubtitle">
+          Sign up to access your Stackly dashboard and accelerate your
+          analytics journey
+        </p>
+
+        <div class="auth-switch" role="tablist" aria-label="Authentication">
+          <button class="switch-button active" id="signupTab" role="tab" aria-selected="true" type="button">
+            Sign up
+          </button>
+          <button class="switch-button" id="loginTab" role="tab" aria-selected="false" type="button">
+            Log in
+          </button>
+        </div>
+
+        <!-- Sign Up Form -->
+        <form id="signupForm" novalidate>
+          <div class="field">
+            <label for="firstName">First name</label>
+            <input id="firstName" name="firstName" type="text" placeholder="Enter Your First Name" autocomplete="given-name">
+            <small class="error" id="firstNameError"></small>
+          </div>
+
+          <div class="field">
+            <label for="lastName">Last name</label>
+            <input id="lastName" name="lastName" type="text" placeholder="Enter Your Last Name" autocomplete="family-name">
+            <small class="error" id="lastNameError"></small>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="Enter Your Email" autocomplete="email">
+            <small class="error" id="emailError"></small>
+          </div>
+
+          <div class="field password-field">
+            <label for="password">Password</label>
+            <div class="password-wrap">
+              <input id="password" name="password" type="password" placeholder="Enter Your Password" autocomplete="new-password">
+              <button class="password-toggle" type="button" aria-label="Show password" data-target="password">
+                <svg class="eye-open" viewBox="0 0 24 24" fill="none">
+                  <path d="M2.5 12s3.4-5 9.5-5 9.5 5 9.5 5-3.4 5-9.5 5-9.5-5-9.5-5Z" stroke="currentColor" stroke-width="1.7"/>
+                  <circle cx="12" cy="12" r="2.6" stroke="currentColor" stroke-width="1.7"/>
+                </svg>
+              </button>
+            </div>
+            <small class="error" id="passwordError"></small>
+          </div>
+
+          <div class="field password-field">
+            <label for="confirmPassword">Confirm password</label>
+            <div class="password-wrap">
+              <input id="confirmPassword" name="confirmPassword" type="password" placeholder="Confirm Your Password" autocomplete="new-password">
+              <button class="password-toggle" type="button" aria-label="Show password" data-target="confirmPassword">
+                <svg class="eye-open" viewBox="0 0 24 24" fill="none">
+                  <path d="M2.5 12s3.4-5 9.5-5 9.5 5 9.5 5-3.4 5-9.5 5-9.5-5-9.5-5Z" stroke="currentColor" stroke-width="1.7"/>
+                  <circle cx="12" cy="12" r="2.6" stroke="currentColor" stroke-width="1.7"/>
+                </svg>
+              </button>
+            </div>
+            <small class="error" id="confirmPasswordError"></small>
+          </div>
+
+          <label class="terms">
+            <input id="terms" type="checkbox">
+            <span class="custom-check" aria-hidden="true"></span>
+            <span>I agree to <a href="#" id="termsLink">Terms &amp; Conditions</a></span>
+          </label>
+          <small class="error terms-error" id="termsError"></small>
+
+          <button class="primary-button" id="createAccount" type="submit" disabled>
+            Create Account
+          </button>
+        </form>
+
+        <!-- Log In Form -->
+        <form id="loginForm" class="hidden-form" novalidate>
+          <div class="field">
+            <label for="loginEmail">Email</label>
+            <input id="loginEmail" name="loginEmail" type="email" placeholder="Enter Your Email" autocomplete="email">
+            <small class="error" id="loginEmailError"></small>
+          </div>
+
+          <div class="field password-field">
+            <label for="loginPassword">Password</label>
+            <div class="password-wrap">
+              <input id="loginPassword" name="loginPassword" type="password" placeholder="Enter Your Password" autocomplete="current-password">
+              <button class="password-toggle" type="button" aria-label="Show password" data-target="loginPassword">
+                <svg class="eye-open" viewBox="0 0 24 24" fill="none">
+                  <path d="M2.5 12s3.4-5 9.5-5 9.5 5 9.5 5-3.4 5-9.5 5-9.5-5-9.5-5Z" stroke="currentColor" stroke-width="1.7"/>
+                  <circle cx="12" cy="12" r="2.6" stroke="currentColor" stroke-width="1.7"/>
+                </svg>
+              </button>
+            </div>
+            <small class="error" id="loginPasswordError"></small>
+          </div>
+
+          <div class="login-row">
+            <label class="terms">
+              <input id="rememberMe" type="checkbox">
+              <span class="custom-check" aria-hidden="true"></span>
+              <span>Remember me</span>
+            </label>
+            <a href="#" id="forgotPasswordLink" class="forgot-link">Forgot password?</a>
+          </div>
+
+          <button class="primary-button" id="loginButton" type="submit">
+            Sign In
+          </button>
+        </form>
+
+        <p class="login-prompt" id="authSwitchPrompt">
+          <span id="promptText">Already have an account?</span>
+          <button type="button" id="toggleAuthMode">Login</button>
+        </p>
+
+        <div class="divider"><span id="socialDividerText">or continue with</span></div>
+
+        <div class="social-actions">
+          <button type="button" class="social-button" aria-label="Continue with Google">
+            <strong>G</strong>
+          </button>
+          <button type="button" class="social-button microsoft" aria-label="Continue with Microsoft">
+            <span></span><span></span><span></span><span></span>
+          </button>
+        </div>
+
+        <p class="support">Need help ? <a href="mailto:support@stackly.com">Contact Support</a></p>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="js/script.js"></script>
+</body>
 </html>
